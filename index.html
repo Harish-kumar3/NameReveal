@@ -1,0 +1,290 @@
+<script>
+  // window.onload = function () {
+  //   document.addEventListener("keypress", musicPlay);
+  //   function musicPlay() {
+  //     document.getElementById("bgmusic").play();
+  //     document.removeEventListener("keypress", musicPlay);
+  //   }
+  // };
+  function sectionOnClick() {
+    document.getElementById("bgmusic").play();
+    var id = document.getElementsByName("sec_eng");
+    id[0].classList.add("eng");
+    id[1].classList.add("eng");
+    var tamid = document.getElementsByName("sec_tam");
+    tamid[0].classList.add("tam");
+    tamid[1].classList.add("tam");
+  }
+</script>
+<style>
+  /* tamil */
+  @font-face {
+    font-family: "Kavivanar";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr8zRAW_0.woff2)
+      format("woff2");
+    unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: "Kavivanar";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr6zRAW_0.woff2)
+      format("woff2");
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+      U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: "Kavivanar";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr5TRA.woff2)
+      format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  body {
+    background-image: url("Rain1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    animation: fade-in 3s forwards;
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  svg text::after {
+    stroke-width: 2;
+    font-size: 80px;
+  }
+  svg text {
+    stroke-width: 0;
+    font-size: 0px;
+  }
+
+  .tam {
+    animation: tamilstroke 10s;
+    animation-fill-mode: forwards;
+  }
+
+  .eng {
+    animation: englishstroke 10s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes tamilstroke {
+    0% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #ffffff;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 4;
+      font-size: 80px;
+    }
+
+    70% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #ffffff;
+      font-size: 80px;
+    }
+    80% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #ffffff;
+      stroke-width: 3;
+      font-size: 80px;
+    }
+    100% {
+      fill: #ffffff;
+      stroke: rgba(54, 95, 160, 0);
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 0;
+      font-size: 80px;
+    }
+  }
+
+  /* latin-ext */
+  @font-face {
+    font-family: "Racing Sans One";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/racingsansone/v15/sykr-yRtm7EvTrXNxkv5jfKKyDCAJnDnapI.woff2)
+      format("woff2");
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+      U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: "Racing Sans One";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/racingsansone/v15/sykr-yRtm7EvTrXNxkv5jfKKyDCAKHDn.woff2)
+      format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @keyframes englishstroke {
+    0% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #ffffff;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 2;
+      font-size: 80px;
+    }
+
+    70% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #ffffff;
+      font-size: 80px;
+    }
+    80% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #ffffff;
+      stroke-width: 3;
+      font-size: 80px;
+    }
+    100% {
+      fill: #ffffff;
+      stroke: rgba(54, 95, 160, 0);
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 0;
+      font-size: 80px;
+    }
+  }
+  section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  /*adding rain img and making opacity 0*/
+  section:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(rain-300x300.png);
+    animation: rain 0.5s linear infinite;
+    opacity: 0;
+  }
+
+  @keyframes rain {
+    0% {
+      background-position: 0 0;
+      opacity: 1;
+    }
+
+    100% {
+      background-position: 8% 80%;
+      opacity: 1;
+    }
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: "Kaushan Script";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/kaushanscript/v16/vm8vdRfvXFLG3OLnsO15WYS5DG72wNJHMw.woff2)
+      format("woff2");
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+      U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: "Kaushan Script";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/kaushanscript/v16/vm8vdRfvXFLG3OLnsO15WYS5DG74wNI.woff2)
+      format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+</style>
+
+<section onclick="sectionOnClick()">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="100%"
+    height="100%"
+    viewBox="-50 0 640 640"
+    font-family="Kavivanar"
+    class="tam"
+  >
+    <text
+      name="sec_tam"
+      x="-45%"
+      y="55%"
+      dy=".35em"
+      text-anchor="right"
+      stroke="#ffffff"
+      fill="#ffffff"
+      font-size="60px"
+    >
+      வருண்
+    </text>
+    <text
+      name="sec_tam"
+      x="-40%"
+      y="70%"
+      dy=".35em"
+      text-anchor="right"
+      stroke="#ffffff"
+      fill="#ffffff"
+      font-size="80px"
+    >
+      அத்யுத்
+    </text>
+  </svg>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="100%"
+    height="100%"
+    viewBox="0 0 640 640"
+    font-family="Kaushan Script"
+    class="eng"
+  >
+    <text
+      name="sec_eng"
+      x="75%"
+      y="15%"
+      dy=".35em"
+      text-anchor="right"
+      stroke=" #ffffff"
+      fill="#ffffff"
+    >
+      Varun
+    </text>
+    <text
+      name="sec_eng"
+      x="85%"
+      y="30%"
+      dy=".35em"
+      text-anchor="right"
+      stroke=" #ffffff"
+      fill="#ffffff"
+    >
+      Adhyuth
+    </text>
+  </svg>
+</section>
+
+<!-- <embed src="Dada.mp3" hidden="true" autostart="true"> -->
+<audio id="bgmusic" loop>
+  <source src="Dada.mp3" type="audio/mpeg" />
+</audio>
