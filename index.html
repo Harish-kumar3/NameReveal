@@ -1,11 +1,11 @@
 <script>
   window.onload = function () {
-    if (confirm('Open in Full Screen?')){
-    var container = document.getElementById("container");
-    container.requestFullscreen();
+    if (confirm("Open in Full Screen?")) {
+      sectionOnClick();
     }
   };
   function sectionOnClick() {
+    document.body.requestFullscreen();
     document.getElementById("bgmusic").play();
     var id = document.getElementsByName("sec_eng");
     id[0].classList.add("eng");
@@ -55,8 +55,21 @@
     overflow: hidden;
     animation: fade-in 3s forwards;
   }
+  ::backdrop {
+    background-image: url("Rain1.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    animation: fade-in 3s forwards;
+  }
   @media (orientation: portrait) {
     body {
+      background-image: url("RainAyappaMobile.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+    ::backdrop {
       background-image: url("RainAyappaMobile.jpeg");
       background-size: cover;
       background-position: center;
@@ -265,22 +278,10 @@
     font-family="Kaushan Script"
     class="eng"
   >
-    <text
-      name="sec_eng"
-      x="25%"
-      y="115%"
-      dy=".35em"
-      text-anchor="right"
-    >
+    <text name="sec_eng" x="25%" y="110%" dy=".35em" text-anchor="right">
       Varun
     </text>
-    <text
-      name="sec_eng"
-      x="35%"
-      y="130%"
-      dy=".35em"
-      text-anchor="right"
-    >
+    <text name="sec_eng" x="35%" y="125%" dy=".35em" text-anchor="right">
       Adhyuth
     </text>
   </svg>
