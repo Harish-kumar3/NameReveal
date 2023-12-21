@@ -1,11 +1,10 @@
 <script>
-  // window.onload = function () {
-  //   document.addEventListener("keypress", musicPlay);
-  //   function musicPlay() {
-  //     document.getElementById("bgmusic").play();
-  //     document.removeEventListener("keypress", musicPlay);
-  //   }
-  // };
+  window.onload = function () {
+    if (confirm('Open in Full Screen?')){
+    var container = document.getElementById("container");
+    container.requestFullscreen();
+    }
+  };
   function sectionOnClick() {
     document.getElementById("bgmusic").play();
     var id = document.getElementsByName("sec_eng");

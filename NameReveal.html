@@ -14,41 +14,21 @@
     var tamid = document.getElementsByName("sec_tam");
     tamid[0].classList.add("tam");
     tamid[1].classList.add("tam");
+    var container = document.getElementById("container");
+    container.requestFullscreen();
   }
 </script>
 <style>
-  /* tamil */
-  @font-face {
-    font-family: "Kavivanar";
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr8zRAW_0.woff2)
-      format("woff2");
-    unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
-  }
-  /* latin-ext */
-  @font-face {
-    font-family: "Kavivanar";
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr6zRAW_0.woff2)
-      format("woff2");
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-      U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: "Kavivanar";
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr5TRA.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
-      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  body {
+    background-image: url("Rain1.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    animation: fade-in 3s forwards;
   }
 
-  body {
+  ::backdrop {
     background-image: url("Rain1.jpeg");
     background-repeat: no-repeat;
     background-position: center;
@@ -58,6 +38,11 @@
   }
   @media (orientation: portrait) {
     body {
+      background-image: url("RainAyappaMobile.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+    ::backdrop {
       background-image: url("RainAyappaMobile.jpeg");
       background-size: cover;
       background-position: center;
@@ -122,28 +107,6 @@
     }
   }
 
-  /* latin-ext */
-  @font-face {
-    font-family: "Racing Sans One";
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/racingsansone/v15/sykr-yRtm7EvTrXNxkv5jfKKyDCAJnDnapI.woff2)
-      format("woff2");
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-      U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: "Racing Sans One";
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/racingsansone/v15/sykr-yRtm7EvTrXNxkv5jfKKyDCAKHDn.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
-      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
   @keyframes englishstroke {
     0% {
       fill: rgba(72, 138, 20, 0);
@@ -203,6 +166,37 @@
       opacity: 1;
     }
   }
+  
+  /* tamil */
+  @font-face {
+    font-family: "Kavivanar";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr8zRAW_0.woff2)
+      format("woff2");
+    unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: "Kavivanar";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr6zRAW_0.woff2)
+      format("woff2");
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+      U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: "Kavivanar";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/kavivanar/v20/o-0IIpQgyXYSwhxP7_Jr5TRA.woff2)
+      format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
   /* latin-ext */
   @font-face {
     font-family: "Kaushan Script";
@@ -226,7 +220,7 @@
   }
 </style>
 
-<section onclick="sectionOnClick()">
+<section id="container" onclick="sectionOnClick()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
@@ -266,22 +260,10 @@
     font-family="Kaushan Script"
     class="eng"
   >
-    <text
-      name="sec_eng"
-      x="75%"
-      y="15%"
-      dy=".35em"
-      text-anchor="right"
-    >
+    <text name="sec_eng" x="75%" y="15%" dy=".35em" text-anchor="right">
       Varun
     </text>
-    <text
-      name="sec_eng"
-      x="85%"
-      y="30%"
-      dy=".35em"
-      text-anchor="right"
-    >
+    <text name="sec_eng" x="85%" y="30%" dy=".35em" text-anchor="right">
       Adhyuth
     </text>
   </svg>
