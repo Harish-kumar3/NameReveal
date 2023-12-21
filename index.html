@@ -1,11 +1,14 @@
 <script>
   window.onload = function () {
-    if (confirm("Open in Full Screen?")) {
-      sectionOnClick();
-    }
+      var conf = confirm("Open in Full Screen?");
+      if(conf===true){
+        sectionOnClick();
+      }
+      //sectionOnClick();
+    
   };
   function sectionOnClick() {
-    document.body.requestFullscreen();
+    // document.body.requestFullscreen();
     document.getElementById("bgmusic").play();
     var id = document.getElementsByName("sec_eng");
     id[0].classList.add("eng");
@@ -238,7 +241,7 @@
   }
 </style>
 
-<section onclick="sectionOnClick()">
+<section onload="sectionOnClick()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
