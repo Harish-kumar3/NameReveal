@@ -1,6 +1,8 @@
 <script>
   function sectionOnClick() {
-    document.getElementById("Blur").style.display="none";
+   document.body.requestFullscreen();
+makeFullScreen(document.body);
+document.getElementById("Blur").style.display="none";
     document.getElementById("Section").style.display = "block";
     document.getElementById("bgmusic").play();
     var id = document.getElementsByName("sec_eng");
@@ -10,6 +12,25 @@
     tamid[0].classList.add("tam");
     tamid[1].classList.add("tam");
   }
+
+function makeFullScreen(divObj) {
+       //Use the specification method before using prefixed versions
+      if (divObj.requestFullscreen) {
+        divObj.requestFullscreen();
+      }
+      else if (divObj.msRequestFullscreen) {
+        divObj.msRequestFullscreen();
+      }
+      else if (divObj.mozRequestFullScreen) {
+        divObj.mozRequestFullScreen();
+      }
+      else if (divObj.webkitRequestFullscreen) {
+        divObj.webkitRequestFullscreen();
+      } else {
+        console.log("Fullscreen API is not supported");
+      } 
+
+    }
 </script>
 
 <style>
